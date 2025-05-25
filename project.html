@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Neon Button</title>
+  <style>
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .button {
+      position: relative;
+      padding: 20px 60px;
+      color: #fff;
+      font-size: 24px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      border: 2px solid #0ff;
+      border-radius: 10px;
+      transition: 0.5s;
+      overflow: hidden;
+    }
+
+    .button:hover {
+      background: #0ff;
+      color: #000;
+      box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+      transition-delay: 0s;
+    }
+
+    .button span {
+      position: absolute;
+      display: block;
+    }
+
+    .button span:nth-child(1) {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #0ff);
+      animation: animate1 1s linear infinite;
+    }
+
+    .button span:nth-child(2) {
+      top: -100%;
+      right: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #0ff);
+      animation: animate2 1s linear infinite;
+      animation-delay: 0.25s;
+    }
+
+    .button span:nth-child(3) {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #0ff);
+      animation: animate3 1s linear infinite;
+      animation-delay: 0.5s;
+    }
+
+    .button span:nth-child(4) {
+      bottom: -100%;
+      left: 0;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(360deg, transparent, #0ff);
+      animation: animate4 1s linear infinite;
+      animation-delay: 0.75s;
+    }
+
+    @keyframes animate1 {
+      0% {
+        left: -100%;
+      }
+      50%,100% {
+        left: 100%;
+      }
+    }
+
+    @keyframes animate2 {
+      0% {
+        top: -100%;
+      }
+      50%,100% {
+        top: 100%;
+      }
+    }
+
+    @keyframes animate3 {
+      0% {
+        right: -100%;
+      }
+      50%,100% {
+        right: 100%;
+      }
+    }
+
+    @keyframes animate4 {
+      0% {
+        bottom: -100%;
+      }
+      50%,100% {
+        bottom: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="button">
+    Neon Button
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </a>
+</body>
+</html>
